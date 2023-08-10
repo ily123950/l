@@ -4,8 +4,9 @@ local blacklist = {"sasabuslox"} -- List of blacklisted players
 game.Players.PlayerAdded:Connect(function(player)
     for _, blacklistedPlayer in ipairs(blacklist) do
         if player.Name:lower() == blacklistedPlayer:lower() then
-            game.Players:Chat(".ban " .. player.Name)
             game.Players:Chat("pm " .. player.Name .. " You are blacklisted!")
+            wait(0.3)
+            game.Players:Chat(".ban " .. player.Name)
             break
         end
     end
