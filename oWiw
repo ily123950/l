@@ -62,7 +62,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         wait(2)
         game.Players:Chat("!rcrash")
     elseif lowerMsg:sub(1, 5) == ".nuke" then
-        game.Players:Chat(".spam gear me 16979083")
+        game.Players:Chat(".spam gear me 11563251")
         wait(0.2)
         game.Players:Chat(".stop")
         game.Players:Chat(".usetools")
@@ -175,7 +175,32 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     elseif lowerMsg == ".vgcrash" then
         local message = "h \n \n \n \n \n \n server crashed."
         game.Players:Chat(message)
+    elseif lowerMsg == ".rails" then
+        game.Players:Chat(".spam gear GAMERNOOBIKYT 79446473")
+        wait(2)
+        game.Players:Chat(".stop")
+
+        wait(0.1) -- Delay for 2 seconds before executing the additional script
+
+        local plr = game:GetService("Players").LocalPlayer
+        plr.Character.Humanoid:UnequipTools()
+
+        local Tools = plr.Backpack:GetChildren()
+        local spiralRadius = 6
+        local spiralHeight = -40
+        local spiralOffset = 0.5
+        local angleIncrement = 15
+
+        for i, tool in ipairs(Tools) do
+            local angle = math.rad(angleIncrement * i)
+            local xPos = spiralRadius * math.cos(angle)
+            local zPos = spiralRadius * math.sin(angle)
+
+            tool.Grip = CFrame.new(xPos, spiralHeight + (i * spiralOffset), zPos) * CFrame.Angles(0, angle, 0)
+            tool.Parent = plr.Character
+        end
     end
+    
     
     if isAntigearEnabled and msg:lower():find("gear me") then
         local playerName = game.Players.LocalPlayer.Name
