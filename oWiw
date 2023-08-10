@@ -152,8 +152,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 
         local Tools = plr.Backpack:GetChildren()
         local numTools = #Tools
-        local radiusOuter = 4 -- Adjust the outer radius of the star
-        local radiusInner = 5 -- Adjust the inner radius of the star
+        local radiusOuter = 2 -- Adjust the outer radius of the star
+        local radiusInner = 3 -- Adjust the inner radius of the star
 
         for i, tool in ipairs(Tools) do
             local angle = (2 * math.pi / numTools) * i
