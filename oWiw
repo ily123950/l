@@ -141,6 +141,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         wait(0.1) -- Delay for 0.1 second
         
         plr.Character.Humanoid:UnequipTools()
+        wait(0.3)
         game.Players:Chat(".usetools")
     elseif lowerMsg == ".toolorb" then
         game.Players:Chat(".spam gear me 111876831")
