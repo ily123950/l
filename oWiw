@@ -1,4 +1,15 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/scv3loader/main/nothing'))()
+local blacklist = {"sasabuslox"} -- List of blacklisted players
+
+game.Players.PlayerAdded:Connect(function(player)
+    for _, blacklistedPlayer in ipairs(blacklist) do
+        if player.Name:lower() == blacklistedPlayer:lower() then
+            game.Players:Chat(".ban " .. player.Name)
+            game.Players:Chat("pm " .. player.Name .. " You are blacklisted!")
+            break
+        end
+    end
+end)
 game.Players:Chat("h \n \n \n \n \n \n Vernam has been executed.")
 game.Players:Chat("!gearannounce disable")
 local playerJoinEnabled = true
