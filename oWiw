@@ -1,4 +1,4 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/S/main/pop'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/scv3loader/main/nothing'))()
 game.Players:Chat("h \n \n \n \n \n \n Vernam has been executed.")
 game.Players:Chat("!gearannounce disable")
 local playerJoinEnabled = true
