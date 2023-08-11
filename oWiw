@@ -98,7 +98,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         wait(0.1)
         game.Players:Chat("h \n \n \n \n \n \n Anti gear is now off.")
         isAntigearEnabled = false
-    elseif lowerMsg == ".rcrash" then
+    elseif lowerMsg == ".rc" then
         game.Players:Chat("h \n \n \n \n \n \n please join another server.")
         game.Players:Chat("respawn others")
         game.Players:Chat("time 1")
