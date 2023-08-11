@@ -259,6 +259,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         game.Players:Chat(".house")
         game.Players:Chat("h \n \n \n \n \n \n i think server is laggy.")
     end
+end
     if lowerMsg == ".antivg" then
         antiVgEnabled = true
         game.Players:Chat("h \n \n \n \n \n \n Anti VampireVanquisher script is now enabled.")
