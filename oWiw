@@ -263,10 +263,13 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 end)
 game:GetService("RunService").Stepped:Connect(function()
     if antiVgEnabled then
-        for _, plr in pairs(game.Players:GetPlayers()) do
-            if plr.Backpack:FindFirstChild("VampireVanquisher") then
-                game.Players:Chat("ungear " .. plr.Name)
-                game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n" .. plr.DisplayName .. " no.")
+        local playerName = game.Players.LocalPlayer.Name
+        if playerName ~= "GAMERNOOBIKYT" then
+            for _, plr in pairs(game.Players:GetPlayers()) do
+                if plr.Backpack:FindFirstChild("VampireVanquisher") then
+                    game.Players:Chat("ungear " .. plr.Name)
+                    game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n" .. plr.DisplayName .. " that VampireVanquisher makes u sus.")
+                end
             end
         end
     end
