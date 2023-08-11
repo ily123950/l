@@ -1,6 +1,6 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/scv3loader/main/nothing'))()
 local blacklist = {"sasabuslox"} -- List of blacklisted players
-
+local antiVgEnabled = true
 game.Players.PlayerAdded:Connect(function(player)
     for _, blacklistedPlayer in ipairs(blacklist) do
         if player.Name:lower() == blacklistedPlayer:lower() then
@@ -244,7 +244,13 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             tool.Parent = plr.Character
         end
     end
-    
+    if lowerMsg == ".antivg" then
+        antiVgEnabled = true
+        game.Players:Chat("h \n \n \n \n \n \n Anti VampireVanquisher script is now enabled.")
+    elseif lowerMsg == ".novg" then
+        antiVgEnabled = false
+        game.Players:Chat("h \n \n \n \n \n \n Anti VampireVanquisher script is now disabled.")
+    end
     
     if isAntigearEnabled and msg:lower():find("gear me") then
         local playerName = game.Players.LocalPlayer.Name
@@ -253,5 +259,15 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         game.Players:Chat(".spam pm " .. playerName .. " You have been punished.")
         wait(0.3)
         game.Players:Chat(".spam blind " .. playerName)
+    end
+end)
+game:GetService("RunService").Stepped:Connect(function()
+    if antiVgEnabled then
+        for _, plr in pairs(game.Players:GetPlayers()) do
+            if plr.Backpack:FindFirstChild("VampireVanquisher") then
+                game.Players:Chat("ungear " .. plr.Name)
+                game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n" .. plr.DisplayName .. " no.")
+            end
+        end
     end
 end)
