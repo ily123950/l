@@ -33,36 +33,7 @@ end)
 
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local lowerMsg = msg:lower()
-       if lowerMsg == ".fr" then
-        game.Players:Chat(".spam gear me 139574344")
-        wait(5)
-        game.Players:Chat(".stop")
-
-        local plr = game:GetService("Players").LocalPlayer
-        plr.Character.Humanoid:UnequipTools()
-
-        local Tools = plr.Backpack:GetChildren()
-        local numTools = #Tools
-        local radiusOuter = 10 -- Adjust the outer radius of the star
-        local radiusInner = 5 -- Adjust the inner radius of the star
-
-        for i, tool in ipairs(Tools) do
-            local angle = (2 * math.pi / numTools) * i
-            local xOuter = math.cos(angle) * radiusOuter
-            local zOuter = math.sin(angle) * radiusOuter
-            local xInner = math.cos(angle + math.pi/numTools) * radiusInner
-            local zInner = math.sin(angle + math.pi/numTools) * radiusInner
-
-            tool.Grip = CFrame.new(xOuter, 0, zOuter) + Vector3.new(xInner, 0, zInner)
-            tool.Parent = plr.Character
-        end
-
-        wait(0.1) -- Delay for 0.1 second
-
-        plr.Character.Humanoid:UnequipTools()
-        wait(0.3)
-        game.Players:Chat(".usetools")
-    end
+      
     if lowerMsg == ".disableplrleave" then
         isPlayerLeaveEnabled = false
     elseif lowerMsg == ".enableplrleave" then
