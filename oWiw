@@ -11,11 +11,14 @@ game.Players.PlayerAdded:Connect(function(player)
         end
     end
 end)
+
 game.Players:Chat("h \n \n \n \n \n \n Vernam has been executed.")
 game.Players:Chat("!gearannounce disable")
+
 local playerJoinEnabled = true
 local isPlayerLeaveEnabled = true
 local isAntigearEnabled = false
+
 game.Players.PlayerAdded:Connect(function(player)
     if playerJoinEnabled then
         game.Players:Chat("h \n \n \n \n \n \n " .. player.Name .. " joined the server!")
@@ -33,13 +36,13 @@ end)
 
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local lowerMsg = msg:lower()
+
     if lowerMsg == ".fr" then
         game.Players:Chat(".spam gear me 139574344")
         wait(5)
         game.Players:Chat(".stop")
         loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/frost/main/loader'))()
     end
-       loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/frost/main/loader'))()
     if lowerMsg == ".disableplrleave" then
         isPlayerLeaveEnabled = false
     elseif lowerMsg == ".enableplrleave" then
@@ -229,6 +232,3 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         game.Players:Chat(".spam blind " .. playerName)
     end
 end)
-
-local player = game.Players.LocalPlayer -- Change this to the player you want to equip tools for
-equipAndUnequipTools(player)
