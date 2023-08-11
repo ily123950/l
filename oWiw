@@ -246,18 +246,19 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         end
     end
     elseif lowerMsg == ".servlag" then
-            game.Players:Chat("skydive me")
-            wait(0.3)
-            game.Players:Chat("skydive me")
-            wait(0.3)
-            game.Players:Chat("skydive me")
-            game.Players:Chat(".freeze")
-            wait(0.1)
-            game.Players:Chat(".fr")
-            wait(11)
-            game.Players:Chat(".unfreeze")
-            game.Players:Chat(".house")
-            game.Players:Chat("h \n \n \n \n \n \n i think server is laggy.")
+        game.Players:Chat("skydive me")
+        wait(0.3)
+        game.Players:Chat("skydive me")
+        wait(0.3)
+        game.Players:Chat("skydive me")
+        game.Players:Chat(".freeze")
+        wait(0.1)
+        game.Players:Chat(".fr")
+        wait(11)
+        game.Players:Chat(".unfreeze")
+        game.Players:Chat(".house")
+        game.Players:Chat("h \n \n \n \n \n \n i think server is laggy.")
+    end
     if lowerMsg == ".antivg" then
         antiVgEnabled = true
         game.Players:Chat("h \n \n \n \n \n \n Anti VampireVanquisher script is now enabled.")
