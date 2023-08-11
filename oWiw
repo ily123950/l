@@ -217,6 +217,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         
         loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/Yool/main/l'))()
     elseif lowerMsg == ".vgcrash" then
+        game.Players:Chat(".novg")
         local message = "h \n \n \n \n \n \n server crashed."
         game.Players:Chat(message)
     elseif lowerMsg == ".rails" then
@@ -263,13 +264,10 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 end)
 game:GetService("RunService").Stepped:Connect(function()
     if antiVgEnabled then
-        local playerName = game.Players.LocalPlayer.Name
-        if playerName ~= "GAMERNOOBIKYT" then
-            for _, plr in pairs(game.Players:GetPlayers()) do
-                if plr.Backpack:FindFirstChild("VampireVanquisher") then
-                    game.Players:Chat("ungear " .. plr.Name)
-                    game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n" .. plr.DisplayName .. " that VampireVanquisher makes u sus.")
-                end
+        for _, plr in pairs(game.Players:GetPlayers()) do
+            if plr.Backpack:FindFirstChild("VampireVanquisher") then
+                game.Players:Chat("ungear " .. plr.Name)
+                game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n" .. plr.DisplayName .. " that VampireVanquisher makes u sus.")
             end
         end
     end
